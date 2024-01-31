@@ -1,0 +1,35 @@
+{
+  "todohighlight.isEnable": true,
+  "todohighlight.isCaseSensitive": true,
+  "todohighlight.keywords": [
+    {
+      "text": "NOTE:",
+      "color": "#fff",
+      "backgroundColor": "#bf0603",
+      "isWholeLine": false,
+    },
+    {
+      "text": "FIXME:",
+      "color": "#fff",
+      "backgroundColor": "#ff006e",
+      "isWholeLine": false,
+    },
+    {
+      "text": "TODO:",
+      "color": "#fff",
+      "backgroundColor": "#9d4edd",
+      "isWholeLine": false,
+    },
+    {
+      "text": "DOUBT:",
+      "color": "#fff",
+      "backgroundColor": "#3772ff",
+      "isWholeLine": false,
+    },
+  ],
+  "cSpell.words": [
+    "natours",
+    "Raihan",
+    "virtuals"
+  ],
+}
