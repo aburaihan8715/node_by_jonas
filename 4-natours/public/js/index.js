@@ -27,11 +27,6 @@ if (userDataForm)
     form.append('email', document.getElementById('email').value);
     form.append('photo', document.getElementById('photo').files[0]);
     updateSettings(form, 'data');
-
-    // const name = document.getElementById('name').value;
-    // const email = document.getElementById('email').value;
-    // console.log(name, email);
-    // updateSettings({ name, email }, 'data');
   });
 
 if (userPasswordForm)

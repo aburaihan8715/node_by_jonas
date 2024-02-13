@@ -12269,11 +12269,6 @@ if (userDataForm) userDataForm.addEventListener('submit', function (e) {
   form.append('email', document.getElementById('email').value);
   form.append('photo', document.getElementById('photo').files[0]);
   (0, _updateSettings.updateSettings)(form, 'data');
-
-  // const name = document.getElementById('name').value;
-  // const email = document.getElementById('email').value;
-  // console.log(name, email);
-  // updateSettings({ name, email }, 'data');
 });
 if (userPasswordForm) userPasswordForm.addEventListener('submit', /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(e) {
