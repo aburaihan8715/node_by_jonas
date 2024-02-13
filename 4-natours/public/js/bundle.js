@@ -12111,6 +12111,22 @@ var updateSettings = exports.updateSettings = /*#__PURE__*/function () {
     return _ref.apply(this, arguments);
   };
 }();
+
+// export const updateSettings = async (data, type) => {
+//   try {
+//     const res = await axios({
+//       method: 'PATCH',
+//       url: 'http://localhost:5000/api/v1/users/updateMe',
+//       data
+//     });
+
+//     if (res.data.status === 'success') {
+//       showAlert('success', `Data updated successfully!`);
+//     }
+//   } catch (error) {
+//     showAlert('error', error.response.data.message);
+//   }
+// };
 },{"axios":"../../node_modules/axios/index.js","./alerts":"alerts.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -12251,7 +12267,6 @@ function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyri
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; } /* eslint-disable */
 // DOM ELEMENTS
-
 var loginForm = document.querySelector('.form--login');
 var logoutBtn = document.querySelector('.nav__el--logout');
 var userDataForm = document.querySelector('.form-user-data');
@@ -12265,8 +12280,15 @@ if (loginForm) document.querySelector('.form').addEventListener('submit', functi
 if (logoutBtn) logoutBtn.addEventListener('click', _login.logout);
 if (userDataForm) userDataForm.addEventListener('submit', function (e) {
   e.preventDefault();
+  // const form = new FormData();
+  // form.append('name', document.getElementById('name').value);
+  // form.append('email', document.getElementById('email').value);
+  // form.append('photo', document.getElementById('photo').files[0]);
+  // updateSettings(form, 'data');
+
   var name = document.getElementById('name').value;
   var email = document.getElementById('email').value;
+  console.log(name, email);
   (0, _updateSettings.updateSettings)({
     name: name,
     email: email
@@ -12329,7 +12351,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62766" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53144" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

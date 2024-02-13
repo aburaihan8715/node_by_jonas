@@ -1,5 +1,5 @@
 class APIFeatures {
-  // TODO: query=Model.find()
+  // NOTE: query=Model.find()
   // Model.find() returns a query object in which we can run find() method
   // queryString= what we pass in the url
   constructor(query, queryString) {
@@ -42,6 +42,9 @@ class APIFeatures {
     }
     return this;
   }
+
+  // NOTE: have to add search features from anisul islam video
+  // search()
 
   paginate() {
     // 3) pagination
