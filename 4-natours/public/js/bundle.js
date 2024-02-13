@@ -12111,22 +12111,6 @@ var updateSettings = exports.updateSettings = /*#__PURE__*/function () {
     return _ref.apply(this, arguments);
   };
 }();
-
-// export const updateSettings = async (data, type) => {
-//   try {
-//     const res = await axios({
-//       method: 'PATCH',
-//       url: 'http://localhost:5000/api/v1/users/updateMe',
-//       data
-//     });
-
-//     if (res.data.status === 'success') {
-//       showAlert('success', `Data updated successfully!`);
-//     }
-//   } catch (error) {
-//     showAlert('error', error.response.data.message);
-//   }
-// };
 },{"axios":"../../node_modules/axios/index.js","./alerts":"alerts.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -12280,19 +12264,16 @@ if (loginForm) document.querySelector('.form').addEventListener('submit', functi
 if (logoutBtn) logoutBtn.addEventListener('click', _login.logout);
 if (userDataForm) userDataForm.addEventListener('submit', function (e) {
   e.preventDefault();
-  // const form = new FormData();
-  // form.append('name', document.getElementById('name').value);
-  // form.append('email', document.getElementById('email').value);
-  // form.append('photo', document.getElementById('photo').files[0]);
-  // updateSettings(form, 'data');
+  var form = new FormData();
+  form.append('name', document.getElementById('name').value);
+  form.append('email', document.getElementById('email').value);
+  form.append('photo', document.getElementById('photo').files[0]);
+  (0, _updateSettings.updateSettings)(form, 'data');
 
-  var name = document.getElementById('name').value;
-  var email = document.getElementById('email').value;
-  console.log(name, email);
-  (0, _updateSettings.updateSettings)({
-    name: name,
-    email: email
-  }, 'data');
+  // const name = document.getElementById('name').value;
+  // const email = document.getElementById('email').value;
+  // console.log(name, email);
+  // updateSettings({ name, email }, 'data');
 });
 if (userPasswordForm) userPasswordForm.addEventListener('submit', /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(e) {

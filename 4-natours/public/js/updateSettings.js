@@ -22,19 +22,3 @@ export const updateSettings = async (data, type) => {
     showAlert('error', error.response.data.message);
   }
 };
-
-// export const updateSettings = async (data, type) => {
-//   try {
-//     const res = await axios({
-//       method: 'PATCH',
-//       url: 'http://localhost:5000/api/v1/users/updateMe',
-//       data
-//     });
-
-//     if (res.data.status === 'success') {
-//       showAlert('success', `Data updated successfully!`);
-//     }
-//   } catch (error) {
-//     showAlert('error', error.response.data.message);
-//   }
-// };
