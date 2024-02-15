@@ -4,25 +4,12 @@ const authController = require('../controllers/authController');
 
 const router = express.Router();
 
-router.get(
-  '/checkout-session/:tourId',
-  authController.protect,
-  bookingController.getCheckoutSession,
-);
-
-module.exports = router;
-
-/*
-const express = require('express');
-const bookingController = require('./../controllers/bookingController');
-const authController = require('./../controllers/authController');
-
-const router = express.Router();
-
+// All routes are protected after this middleware
 router.use(authController.protect);
 
 router.get('/checkout-session/:tourId', bookingController.getCheckoutSession);
 
+// All routes are restricted to (admin and lead-guide) after this middleware
 router.use(authController.restrictTo('admin', 'lead-guide'));
 
 router
@@ -37,4 +24,3 @@ router
   .delete(bookingController.deleteBooking);
 
 module.exports = router;
-*/
